@@ -51,7 +51,7 @@ Out:
 
 #Update a series
 #if you insert the same index, it will overwrite the previous value; 
-#if two index have different values in the original series, both will be updated)
+#if two indexes have different values in the original series, both will be updated)
 In: srs['1900'] = 11
 Out: 
 1968    10
