@@ -13,7 +13,6 @@ Out[4]:
 1970    22
 Name: srs, dtype: int64
 
-
 #Search values in a series
 In: srs['1970']
 Out[6]: 
@@ -31,5 +30,24 @@ Out:
 22
 
 #See if a value exists in a series
-22 in set(srs)
+In: 22 in set(srs)
 Out[9]: True
+
+In: 22 in srs.values
+Out: True
+        
+#See membership (over the index)
+In: '1970' in srs
+Out: True
+
+#Iterate over tuples (index + value)
+for item in srs.iteritems():
+        print item
+Out:
+('1968', 10)
+('1969', 7)
+('1970', 1)
+('1970', 22)
+
+#Update a series
+       
