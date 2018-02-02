@@ -50,4 +50,15 @@ Out:
 ('1970', 22)
 
 #Update a series
-       
+#if you insert the same index, it will overwrite the previous value; 
+#if two index have different values in the original series, both will be updated)
+In: srs['1900'] = 11
+Out: 
+1968    10
+1969     7
+1970     1
+1970    22
+1900    11
+Name: srs, dtype: int64
+                
+
