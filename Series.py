@@ -1,4 +1,4 @@
-#Create a series
+#CREATE A SERIES
 import pandas as pd
 srs = pd.Series([10, 7, 1, 22],
 index = ['1968', '1969', '1970', '1970'],
@@ -49,7 +49,7 @@ Out:
 ('1970', 1)
 ('1970', 22)
 
-#Update a series
+#UPDATE A SERIES
 #if you insert the same index, it will overwrite the previous value; 
 #if two indexes have different values in the original series, both will be updated)
 In: srs['1900'] = 11
@@ -59,6 +59,39 @@ Out:
 1970     1
 1970    22
 1900    11
+Name: srs, dtype: int64
+                
+#To update a value according to its position in the series use ILOC
+srs = pd.Series([10, 7, 1, 22],
+index = ['1968', '1969', '1970', '1970'],
+name = 'srs')
+
+In: srs.iloc[3] = 30
+
+Out: 
+1968    10
+1969     7
+1970     1
+1970    30
+
+#To append another series use .append
+In: srs.append(pd.Series({'1980':9}))
+Out: 
+1968    10
+1969     7
+1970     1
+1970    30
+1980     9
+dtype: int64
+        
+#to add a new item and return the series use .set_value (attention, it will be deprecated and replaced by .at[] or .iat[])
+srs.set_value('1990', 9)
+Out[7]: 
+1968    10
+1969     7
+1970     1
+1970    30
+1990     9
 Name: srs, dtype: int64
                 
 
