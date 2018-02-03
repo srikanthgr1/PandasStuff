@@ -67,7 +67,6 @@ index = ['1968', '1969', '1970', '1970'],
 name = 'srs')
 
 In: srs.iloc[3] = 30
-
 Out: 
 1968    10
 1969     7
@@ -94,4 +93,12 @@ Out[7]:
 1990     9
 Name: srs, dtype: int64
                 
+#DELETE A SERIES (not common, it is better to create a new Series to work on)
+del srs['1990']
 
+#Return values less or equal than 7
+In: srs[srs <= 7]
+Out: 
+1969    7
+1970    1
+Name: srs, dtype: int64
